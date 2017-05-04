@@ -6,6 +6,7 @@ class Project(models.Model):
     progress = models.FloatField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    description = models.TextField(max_length=2000, blank=True, null=True, default='')
 
     def __str__(self):
         return self.title
